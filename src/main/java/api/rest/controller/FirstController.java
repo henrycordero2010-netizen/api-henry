@@ -1,7 +1,7 @@
 package api.rest.controller;
 
 import api.rest.dto.DebtResponse;
-import api.rest.application.usecase.FindDebtsService;
+import api.rest.application.usecase.FindFirstService;
 import api.rest.common.enums.Type;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -20,12 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/debts")
 @Validated
 @Slf4j
-public class DebtController {
+public class FirstController {
 
     @Autowired
-    private FindDebtsService findDebtsService;
+    private FindFirstService findDebtsService;
 
-    public DebtController(FindDebtsService findDebtsService) { this.findDebtsService = findDebtsService; }
+    public FirstController(FindFirstService findDebtsService) { this.findDebtsService = findDebtsService; }
 
     @GetMapping
     public ResponseEntity<DebtResponse> findByCustomerId(
