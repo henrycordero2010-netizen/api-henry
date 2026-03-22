@@ -12,6 +12,22 @@ target/
 *.iml
 *.ipr
 
+### IntelliJ IDEA - user-specific/workspace
+.idea/workspace.xml
+.idea/**/workspace.xml
+.idea/tasks.xml
+# keep project-level metadata but ignore workspace and local run configs
+!.idea/
+.idea/*.iml
+
+### Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+### Logs and local env
+*.log
+.env
+
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -33,6 +49,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# OS
+.DS_Store
+
+# Java
+*.class
+
+# Maven
+target/
 
 ### Mac OS ###
 .DS_Store
