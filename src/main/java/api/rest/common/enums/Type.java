@@ -1,15 +1,15 @@
 package api.rest.common.enums;
 
-public enum DebtType {
-    MORA("M"),
-    PREVENTIVA("P"),
-    TARDIA("T"),
+public enum Type {
+    MIENTRAS("M"),
+    PORQUE("P"),
+    TODAVIA("T"),
     OTROS("O"),
     TODOS("X");
 
     private String type;
 
-    private DebtType(String type) {
+    private Type(String type) {
         this.type = type;
     }
 

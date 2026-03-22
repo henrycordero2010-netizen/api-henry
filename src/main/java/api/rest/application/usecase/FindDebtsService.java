@@ -1,7 +1,7 @@
 package api.rest.application.usecase;
 
 import api.rest.dto.DebtResponse;
-import api.rest.common.enums.DebtType;
+import api.rest.common.enums.Type;
 import api.rest.dto.DebtResponseDetail;
 import api.rest.infraestructure.data.entity.DebtEntity;
 import api.rest.infraestructure.data.repository.DebtRepository;
@@ -18,7 +18,7 @@ public class FindDebtsService {
 
     List<DebtEntity> response;
 
-    public DebtResponse findDebtByCustomerIdAndGestionType(String customerId, DebtType debtType) {
+    public DebtResponse findDebtByCustomerIdAndGestionType(String customerId, Type debtType) {
 
         if (debtType == null) {
             response = debtRepository.findAllByCustomerId(customerId);
