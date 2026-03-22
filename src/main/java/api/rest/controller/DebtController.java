@@ -2,7 +2,7 @@ package api.rest.controller;
 
 import api.rest.dto.DebtResponse;
 import api.rest.application.usecase.FindDebtsService;
-import api.rest.common.enums.DebtType;
+import api.rest.common.enums.Type;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -34,7 +34,7 @@ public class DebtController {
             @Pattern(regexp = "^[0-9]{1,8}$")
             String customerId,
             @Valid
-            DebtType debtType){
+            Type debtType){
         return ResponseEntity.status(HttpStatus.OK).body(findDebtsService.findDebtByCustomerIdAndGestionType(customerId,debtType));
     }
 }
